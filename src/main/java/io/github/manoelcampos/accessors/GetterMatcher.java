@@ -9,7 +9,7 @@ import static net.bytebuddy.matcher.ElementMatchers.isGetter;
 /**
  * Aa {@link ElementMatcher} to check if a method is the getter for a given field.
  * @author Manoel Campos
- * @see EntityAccessorInstrumentationPlugin
+ * @see ClassAccessorInstrumentationPlugin
  */
 class GetterMatcher extends AbstractAccessorMatcher {
     /**

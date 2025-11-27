@@ -4,7 +4,9 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.manoelcampos</groupId>
     <artifactId>automatic-class-accessors-sample</artifactId>
-    <version>1.0.0</version>
+
+    <!-- The project version defines the version of the auto-class-accessors-maven-plugin to be used -->
+    <version>1.0.3</version>
 
     <properties>
         <maven.compiler.release>21</maven.compiler.release>
@@ -25,7 +27,7 @@
             <plugin>
                 <groupId>io.github.manoelcampos</groupId>
                 <artifactId>auto-class-accessors-maven-plugin</artifactId>
-                <version>1.0.2</version>
+                <version>${project.version}</version>
                 <executions><execution><goals><goal>apply</goal></goals></execution></executions>
             </plugin>
         </plugins>

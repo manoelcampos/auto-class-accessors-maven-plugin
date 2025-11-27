@@ -23,7 +23,7 @@ import static org.twdata.maven.mojoexecutor.MojoExecutor.*;
 public class AutoClassAccessorsMojo extends AbstractMojo {
     /**
      * A reference to the current version of the Auto Class Accessors Maven Plugin,
-     * to get the {@link EntityAccessorInstrumentationPlugin class that implements a Byte Buddy Plugin}.
+     * to get the {@link ClassAccessorInstrumentationPlugin class that implements a Byte Buddy Plugin}.
      * Such a class is the one that actually applies the byte code transformation,
      * replacing accesses to public instance fields by getter/setter calls.
      *
@@ -38,7 +38,7 @@ public class AutoClassAccessorsMojo extends AbstractMojo {
      */
     final MavenDependency accessorsPlugin = new MavenDependency(
             "io.github.manoelcampos", "auto-class-accessors-maven-plugin",
-            "1.0.2"
+            "1.0.3"
     );
 
     private final MavenDependency byteBuddyPlugin = new MavenDependency("net.bytebuddy", "byte-buddy-maven-plugin", "1.17.2");
@@ -82,7 +82,7 @@ public class AutoClassAccessorsMojo extends AbstractMojo {
                             element("groupId", accessorsPlugin.groupId()),
                             element("artifactId", accessorsPlugin.artifactId()),
                             element("version", accessorsPlugin.version()),
-                            element("plugin", EntityAccessorInstrumentationPlugin.class.getName())
+                            element("plugin", ClassAccessorInstrumentationPlugin.class.getName())
                         )
                     )
                 ),

@@ -17,7 +17,7 @@ import static net.bytebuddy.matcher.ElementMatchers.*;
  * This plugin defines how the transformation will be done, indicating when and how byte code will be changed.
  * @author Manoel Campos
  */
-public class EntityAccessorInstrumentationPlugin implements Plugin {
+public class ClassAccessorInstrumentationPlugin implements Plugin {
     @Override
     public DynamicType.Builder<?> apply(
         final DynamicType.Builder<?> builder,
@@ -60,7 +60,7 @@ public class EntityAccessorInstrumentationPlugin implements Plugin {
     /**
      * {@inheritDoc}
      * Indicates that only classes (where a field access was intercepted) will be transformed by this plugin.
-     * This no, interfaces and records are not transformed since there is no need for them.
+     * This way, interfaces and records are not transformed since there is no need for them.
      * @param typeDefinition {@inheritDoc}
      * @return {@inheritDoc}
      */

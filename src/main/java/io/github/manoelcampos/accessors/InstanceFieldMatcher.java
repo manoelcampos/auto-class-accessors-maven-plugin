@@ -14,7 +14,7 @@ import static net.bytebuddy.matcher.ElementMatchers.*;
  * It's used to intercept reads and writes to such fields in order to replace them by the respective accessor method calls.
  *
  * @author Manoel Campos
- * @see EntityAccessorInstrumentationPlugin
+ * @see ClassAccessorInstrumentationPlugin
  */
 class InstanceFieldMatcher extends ElementMatcher.Junction.AbstractBase<FieldDescription> {
     /**
@@ -32,7 +32,7 @@ class InstanceFieldMatcher extends ElementMatcher.Junction.AbstractBase<FieldDes
     private FieldDescription fieldDescription;
 
     /**
-     * The type being transformed
+     * The type being transformed, which is the one that declares the field being matched.
      */
     private final TypeDescription typeDescription;
 
