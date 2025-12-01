@@ -6,7 +6,7 @@
     <packaging>maven-plugin</packaging>
 
     <!-- Changing this version requires to change the version at AutoClassAccessorsMojo#accessorsPlugin -->
-    <version>1.0.3</version>
+    <version>1.0.4</version>
 
     <name>auto-class-accessors-maven-plugin</name>
     <description>

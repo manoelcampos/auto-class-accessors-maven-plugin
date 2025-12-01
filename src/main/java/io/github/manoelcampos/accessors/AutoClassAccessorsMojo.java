@@ -38,7 +38,7 @@ public class AutoClassAccessorsMojo extends AbstractMojo {
      */
     final MavenDependency accessorsPlugin = new MavenDependency(
             "io.github.manoelcampos", "auto-class-accessors-maven-plugin",
-            "1.0.3"
+            "1.0.4"
     );
 
     private final MavenDependency byteBuddyPlugin = new MavenDependency("net.bytebuddy", "byte-buddy-maven-plugin", "1.17.2");
