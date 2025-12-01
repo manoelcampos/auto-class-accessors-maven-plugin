@@ -49,7 +49,8 @@ class InstanceFieldMatcher extends ElementMatcher.Junction.AbstractBase<FieldDes
 
     @Override
     public boolean matches(final FieldDescription field) {
-        // If a field is directly accessed inside the class that declares it, no transformation is performed
+        /* If a field is directly accessed inside the class that declares it
+        or a super type, no transformation is performed */
         final boolean isFieldAccessOutsideDeclaringClass = !field.getDeclaringType().equals(typeDescription);
         final boolean matches =
                 isFieldAccessOutsideDeclaringClass &&
