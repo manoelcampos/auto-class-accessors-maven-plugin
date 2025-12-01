@@ -19,7 +19,7 @@ import static org.twdata.maven.mojoexecutor.MojoExecutor.*;
 /// replacing access to public instance fields by the respective accessor (getter/setter) method call, if available.
 /// @author Manoel Campos da Silva Filho
 /// @link https://maven.apache.org/guides/plugin/guide-java-plugin-development.html
-@Mojo(name = "apply", defaultPhase = LifecyclePhase.PROCESS_TEST_CLASSES, requiresDependencyResolution = ResolutionScope.COMPILE)
+@Mojo(name = "apply", defaultPhase = LifecyclePhase.PROCESS_TEST_CLASSES, requiresDependencyResolution = ResolutionScope.TEST)
 public class AutoClassAccessorsMojo extends AbstractMojo {
     /**
      * A reference to the current version of the Auto Class Accessors Maven Plugin,
