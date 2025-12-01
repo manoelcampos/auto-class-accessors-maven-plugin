@@ -5,7 +5,7 @@
     <artifactId>auto-class-accessors-maven-plugin</artifactId>
     <packaging>maven-plugin</packaging>
 
-    <!-- Changing this version requires to change AutoClassAccessorsMojo#AUTO_CLASS_ACCESSORS_VERSION -->
+    <!-- Changing this version requires to change the version at AutoClassAccessorsMojo#accessorsPlugin -->
     <version>1.0.3</version>
 
     <name>auto-class-accessors-maven-plugin</name>
@@ -51,8 +51,7 @@
              To execute use: mvn clean deploy -P sonatype
 
              To check the deployed artifact and probably release it to maven central
-             you should visit https://oss.sonatype.org.
-             MAKE SURE YOU ARE LOGGED IN TO SEE YOUR DEPLOYMENTS.
+             you should visit https://central.sonatype.com.
              -->
             <id>sonatype</id>
 
